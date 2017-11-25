@@ -3,7 +3,7 @@ from os import listdir
 import matplotlib
 import matplotlib.pyplot as plt
 
-file_names = [f for f in listdir('/home/qoo/Documents/ubike/data')]
+file_names = [f for f in listdir('data')]
 file_names.sort()
 
 can_borrow = {}
@@ -15,7 +15,7 @@ key = 'snaen'
 total_bikes = {}
 
 for file_name in file_names:
-    df = pd.read_csv('/home/qoo/Documents/ubike/data/' + file_name)
+    df = pd.read_csv('data/' + file_name)
     for i, row in df.iterrows():
         if row['sna'] in sites:
             total_bikes[row['sna']] = row['tot']

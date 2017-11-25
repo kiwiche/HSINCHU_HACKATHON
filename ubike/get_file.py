@@ -16,7 +16,7 @@ with requests.Session() as s:
     #     print(row)
     # print(my_list[0])
     file_name = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    f = open('/home/qoo/Documents/ubike/data/' + file_name + '.csv', "w")
+    f = open('data/' + file_name + '.csv', "w")
     w = csv.writer(f)
     w.writerows(my_list)
     f.close()

@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-df = pd.read_csv('/home/qoo/Documents/ubike/自行車.csv')
+df = pd.read_csv('自行車.csv')
 
 print('各區可借與可還數量')
 print(df.groupby('sarea')[['sbi', 'bemp']].sum())
